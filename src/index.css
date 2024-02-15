@@ -149,7 +149,7 @@ ul {
 }
 
 .img {
-  width: 110%;
+  width: 100%;
   display: block;
   object-fit: cover;
 }

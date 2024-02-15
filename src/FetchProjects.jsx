@@ -15,7 +15,12 @@ export const useData = () => {
     const fetchProjects = async () => {
         try {
             const Response = await client.getEntries({ content_type: 'projects' });
-            setData(Response.items);
+            const projects = Response.items.map((item)=>{
+                
+                return item.fields
+            })
+
+            setData(projects);
             setLoading(false);
         } catch (error) {
             console.error("Error fetching projects:", error);
